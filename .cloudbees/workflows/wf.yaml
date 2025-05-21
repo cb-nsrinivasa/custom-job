@@ -9,7 +9,7 @@ on:
       
 jobs:
     custom:
-        delegates: mluzcabrera/customjobpoll/topollillo.yaml
+        delegates: cb-nsrinivasa/custom-job/custom.yaml
         with:
             some-arg: ${{ vars.testpropertymlcb404 }}
         secrets:
