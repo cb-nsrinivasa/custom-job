@@ -8,12 +8,9 @@ inputs:
     required: false
 handlers: 
   init:
-    uses: docker://golang:1.20.3-alpine3.17
+    uses: docker://alpine
     command: /bin/sh
     args: -c "echo 'Waiting for callback: ${{callback.url}}'"
-    env: 
-      PARAM1: ${{ inputs.param1 }}
-      URL: ${{ cloudbees.api.url }}
   callback:
     uses: docker://golang:1.20.3-alpine3.17
     command: /bin/sh
