@@ -11,7 +11,5 @@ jobs:
     custom:
         delegates: cb-nsrinivasa/custom-job/.cloudbees/workflows/custom.yaml@v1
         with:
-            some-arg: ${{ vars.testpropertymlcb404 }}
-        secrets:
-            asecret: ${{ secrets.testsecret1 }}
+            param1: "asdf"
         timeout-minutes: 4311
