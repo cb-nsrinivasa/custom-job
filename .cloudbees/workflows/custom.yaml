@@ -10,11 +10,7 @@ handlers:
   init:
     uses: docker://golang:1.20.3-alpine3.17
     command: /bin/sh
-    args: |
-      -c "
-      echo \"Param1: $PARAM1\"
-      echo \"URL: $URL\"
-      "
+    args: -c "echo 'Waiting for callback: ${{callback.url}}'"
     env: 
       PARAM1: ${{ inputs.param1 }}
       URL: ${{ cloudbees.api.url }}
