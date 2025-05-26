@@ -10,7 +10,11 @@ handlers:
   init:
     uses: docker://alpine
     command: /bin/sh
-    args: -c "echo 'Waiting for callback: ${{callback.url}}'"
+    args: |
+      -c "
+      echo \"Param1: $PARAM1\"
+      echo \"URL: $URL\"
+      "
   callback:
     uses: docker://golang:1.20.3-alpine3.17
     command: /bin/sh
