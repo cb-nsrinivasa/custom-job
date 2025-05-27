@@ -14,8 +14,10 @@ handlers:
       -c "
       echo \"Param1: $PARAM1\"
       echo \"URL: $URL\"
-      echo \"callbak: ${{callback.url}}\"  fromJSON   
-      echo \"json: ${{toJSON(callback)}}\"      
+      echo \"callbak: ${{callback.url}}\"   
+      echo \"json: ${{toJSON(callback)}}\"
+      echo -n "hello" | cloudbees mask
+      echo  "hello"
       
       "
   callback:
