@@ -14,7 +14,9 @@ handlers:
       -c "
       echo \"Param1: $PARAM1\"
       echo \"URL: $URL\"
-      echo \"callbak: ${{callback.url}}\"      
+      echo \"callbak: ${{callback.url}}\"  fromJSON   
+      echo \"json: ${{fromJSON(callback)}}\"      
+      
       "
   callback:
     uses: docker://golang:1.20.3-alpine3.17
