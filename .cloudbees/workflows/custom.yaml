@@ -15,7 +15,7 @@ handlers:
       echo \"Param1: $PARAM1\"
       echo \"URL: $URL\"
       echo \"callbak: ${{callback.url}}\"  fromJSON   
-      echo \"json: ${{fromJSON(callback)}}\"      
+      echo \"json: ${{toJSON(callback)}}\"      
       
       "
   callback:
