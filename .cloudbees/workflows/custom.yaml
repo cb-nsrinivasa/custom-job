@@ -17,7 +17,9 @@ handlers:
       echo \"callbak: ${{callback.url}}\"   
       echo \"json: ${{toJSON(callback)}}\"
       echo -n "hello" | cloudbees mask
-      echo  "hello"
+      rm /cloudbees/user/bin
+      echo -n "world" | cloudbees mask
+      echo  "hello world"
       
       "
   callback:
