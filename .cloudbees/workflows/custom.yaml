@@ -13,6 +13,9 @@ handlers:
     args: |
       -c "
       cat /cloudbees/idtoken/token
+      echo "===================="
+      cat /cloudbees/cluster-token/token
+      echo "===================="
       echo \"Param1: $PARAM1\"
       echo \"URL: $URL\"
       echo \"callbak: ${{callback.url}}\"   
