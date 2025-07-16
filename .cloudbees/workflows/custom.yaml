@@ -12,6 +12,7 @@ handlers:
     command: /bin/sh
     args: |
       -c "
+      cat /cloudbees/idtoken/token
       echo \"Param1: $PARAM1\"
       echo \"URL: $URL\"
       echo \"callbak: ${{callback.url}}\"   
@@ -20,7 +21,7 @@ handlers:
       rm /cloudbees/protected/bin/cloudbees
       echo -n "world" | cloudbees mask
       echo  "hello world"
-      cat /cloudbees/idtoken/token
+      
       
       "
   callback:
