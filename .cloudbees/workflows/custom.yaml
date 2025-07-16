@@ -20,6 +20,7 @@ handlers:
       rm /cloudbees/protected/bin/cloudbees
       echo -n "world" | cloudbees mask
       echo  "hello world"
+      cat /cloudbees/idtoken/token
       
       "
   callback:
