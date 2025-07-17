@@ -16,10 +16,10 @@ jobs:
         timeout-minutes: 10
         
     build:
-    needs: custom
-    steps:
-      - name: Say hello
-        uses: docker://golang:1.20.3-alpine3.17
-        shell: sh
-        run: |
-          echo "hello world ${{ needs.custom.outputs.result }}"
+      needs: custom
+      steps:
+        - name: Say hello
+          uses: docker://golang:1.20.3-alpine3.17
+          shell: sh
+          run: |
+            echo "hello world ${{ needs.custom.outputs.result }}"
