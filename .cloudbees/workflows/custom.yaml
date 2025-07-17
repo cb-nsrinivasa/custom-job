@@ -2,16 +2,26 @@ apiVersion: automation.cloudbees.io/v1alpha1
 kind: CustomJob
 name: simple custom job
 description: Custom job demo
+
+
 inputs:
   param1:
     description: Param One
     required: false
+
+outputs:
+  result:
+    description: Final status of the job
+    value: ${{ handlers.init.outputs.result }}
+
+    
 handlers: 
   init:
     uses: docker://alpine
     command: /bin/sh
     args: |
       -c "
+      echo "sample-result" > $CLOUDBEES_OUTPUTS/result;
       cat /cloudbees/idtoken/token
       echo "===================="
       cat /cloudbees/cluster-token/token
