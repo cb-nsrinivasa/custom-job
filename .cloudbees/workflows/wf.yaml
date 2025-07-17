@@ -13,4 +13,13 @@ jobs:
         delegates: cb-nsrinivasa/custom-job/.cloudbees/workflows/custom.yaml
         with:
             param1: "asdf"
-        timeout-minutes: 4311
+        timeout-minutes: 10
+        
+    build:
+    needs: custom
+    steps:
+      - name: Say hello
+        uses: docker://golang:1.20.3-alpine3.17
+        shell: sh
+        run: |
+          echo "hello world ${{ needs.custom.outputs.result }}"
