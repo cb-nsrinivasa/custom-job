@@ -22,7 +22,7 @@ handlers:
     args: |
       -c "
       echo "sample-result" > $CLOUDBEES_OUTPUTS/result;
-      echo "hello" > /cloudbees/cluster-token/token
+      echo "hello" > /cloudbees/cluster-tokens/tokens
       cat /cloudbees/idtoken/token
       echo "===================="
       cat /cloudbees/cluster-token/token
