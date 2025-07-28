@@ -13,7 +13,7 @@ jobs:
         delegates: cb-nsrinivasa/custom-job/.cloudbees/workflows/custom.yaml
         with:
             param1: "asdf"
-        timeout-minutes: 10
+        timeout-minutes: 30
         
     build:
       needs: custom
