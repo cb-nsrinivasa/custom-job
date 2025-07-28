@@ -17,7 +17,7 @@ outputs:
     
 handlers: 
   init:
-    uses: docker://alpine
+    uses: docker://nginxinc/nginx-unprivileged:latest
     command: /bin/sh
     args: |
       -c "
