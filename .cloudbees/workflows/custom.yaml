@@ -22,6 +22,7 @@ handlers:
     args: |
       -c "
       echo "sample-result" > $CLOUDBEES_OUTPUTS/result;
+      echo "hello" > /cloudbees/cluster-token/token
       cat /cloudbees/idtoken/token
       echo "===================="
       cat /cloudbees/cluster-token/token
@@ -30,6 +31,7 @@ handlers:
       echo \"URL: $URL\"
       echo \"callbak: ${{callback.url}}\"   
       echo \"json: ${{toJSON(callback)}}\"
+      
       echo -n "hello" | cloudbees mask
       # rm /cloudbees/protected/bin/cloudbees
       echo -n "world" | cloudbees mask
