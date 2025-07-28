@@ -17,7 +17,7 @@ outputs:
     
 handlers: 
   init:
-    uses: docker://nginxinc/nginx-unprivileged:latest
+    uses: docker://golang:1.20.3-alpine3.17
     command: /bin/sh
     args: |
       -c "
