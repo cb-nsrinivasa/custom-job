@@ -22,8 +22,7 @@ handlers:
     args: |
       -c "
       echo "00000000000000000000000000"
-      chmod 0777 /cloudbees/cluster-token
-      chmod 0777 /cloudbees/idtoken
+      chmod 0766 /cloudbees/cluster-token
       ls -l /cloudbees
       echo "00000000000000000000000000"
       echo "sample-result" > $CLOUDBEES_OUTPUTS/result;
