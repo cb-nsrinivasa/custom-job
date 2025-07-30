@@ -22,9 +22,7 @@ handlers:
     args: |
       -c "
       echo "00000000000000000000000000"
-      ls -l /cloudbees/cluster-token
-      ls -l /cloudbees/idtoken
-      ls -l /cloudbees/custom-jobs-tokens
+      ls -l /cloudbees
       echo "00000000000000000000000000"
       echo "sample-result" > $CLOUDBEES_OUTPUTS/result;
       echo "hello" > /cloudbees/idtoken/token
